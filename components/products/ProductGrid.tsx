@@ -1,30 +1,24 @@
-import { products } from "@/data/products";
+"use client";
+
+import { Product } from "@/types/product";
 import ProductCard from "../home/ProductCard";
 
-export default function ProductGrid(){
+interface Props {
+  products: Product[];
+}
 
-return(
-
-<div className="grid md:grid-cols-3 gap-8">
-
-{products.map((product)=>(
-
-<ProductCard
-
-key={product.id}
-
-title={product.name}
-
-price={product.price}
-
-slug={product.slug}
-
-/>
-
-))}
-
-</div>
-
-)
-
+export default function ProductGrid({ products }: Props) {
+  return (
+    <div className="grid md:grid-cols-3 gap-8">
+      {products.map((product) => (
+        <ProductCard
+          key={product.id}
+          title={product.name}
+          price={product.price}
+          slug={product.slug}
+          image={product.image}
+        />
+      ))}
+    </div>
+  );
 }
