@@ -12,7 +12,7 @@ export default function Feature() {
           subtitle="250年的製香工藝"
         />
 
-        <div className="grid grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-4 gap-8">
           <FeatureCard title="天然原料" text="嚴選天然香材" />
           <FeatureCard title="SGS" text="安全檢驗" />
           <FeatureCard title="MIT" text="台灣製造" />
