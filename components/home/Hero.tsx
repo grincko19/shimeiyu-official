@@ -1,11 +1,15 @@
 import HeroBackground from "./HeroBackground";
 import HeroContent from "./HeroContent";
+import ScrollFade from "../animation/ScrollFade";
 
 export default function Hero() {
   return (
-    <section className="h-screen flex items-center justify-center relative overflow-hidden">
+    <div className="h-screen relative flex items-center justify-center overflow-hidden">
       <HeroBackground />
-      <HeroContent />
-    </section>
+
+      <ScrollFade>
+        <HeroContent />
+      </ScrollFade>
+    </div>
   );
 }
