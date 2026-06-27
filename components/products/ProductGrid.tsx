@@ -1,28 +1,30 @@
 import { products } from "@/data/products";
 import ProductCard from "../home/ProductCard";
 
-export default function ProductGrid() {
+export default function ProductGrid(){
 
-  return (
+return(
 
-    <div className="grid md:grid-cols-3 gap-8">
+<div className="grid md:grid-cols-3 gap-8">
 
-      {products.map((product) => (
+{products.map((product)=>(
 
-        <ProductCard
+<ProductCard
 
-          key={product.id}
+key={product.id}
 
-          title={product.name}
+title={product.name}
 
-          price={product.price}
+price={product.price}
 
-        />
+slug={product.slug}
 
-      ))}
+/>
 
-    </div>
+))}
 
-  );
+</div>
+
+)
 
 }
