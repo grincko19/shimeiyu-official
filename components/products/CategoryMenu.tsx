@@ -1,49 +1,31 @@
-const categories = [
+"use client";
 
-"全部",
+interface Props {
+  categories: string[];
+  current: string;
+  onChange: (category: string) => void;
+}
 
-"沉香",
-
-"檀香",
-
-"盤香",
-
-"環香",
-
-"塔香",
-
-"香粉",
-
-"香油",
-
-"佛珠"
-
-];
-
-export default function CategoryMenu(){
-
-return(
-
-<div className="flex flex-wrap gap-4 mb-10">
-
-{categories.map((item)=>(
-
-<button
-
-key={item}
-
-className="px-5 py-2 rounded-full border hover:bg-black hover:text-white duration-300"
-
->
-
-{item}
-
-</button>
-
-))}
-
-</div>
-
-)
-
+export default function CategoryMenu({
+  categories,
+  current,
+  onChange,
+}: Props) {
+  return (
+    <div className="flex flex-wrap gap-3 mb-8">
+      {categories.map((category) => (
+        <button
+          key={category}
+          onClick={() => onChange(category)}
+          className={`px-5 py-2 rounded-full border transition ${
+            current === category
+              ? "bg-[#1E352B] text-white"
+              : "bg-white hover:bg-gray-100"
+          }`}
+        >
+          {category}
+        </button>
+      ))}
+    </div>
+  );
 }
