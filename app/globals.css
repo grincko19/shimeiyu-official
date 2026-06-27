@@ -16,13 +16,12 @@ body {
   font-family: Inter, sans-serif;
 }
 
+/* 全站動畫統一過渡 */
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
-img {
-  max-width: 100%;
-  display: block;
+a,
+button {
+  transition: all 0.25s ease;
 }
