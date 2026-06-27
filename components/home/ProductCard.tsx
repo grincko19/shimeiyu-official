@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Card from "../ui/Card";
 
 interface Props{
@@ -6,13 +7,17 @@ title:string;
 
 price:number;
 
+slug:string;
+
 }
 
 export default function ProductCard({
 
 title,
 
-price
+price,
+
+slug
 
 }:Props){
 
@@ -28,21 +33,25 @@ return(
 
 </h3>
 
-<p className="mt-3 text-lg font-bold">
+<p className="mt-3 font-bold">
 
 NT$ {price}
 
 </p>
 
+<Link
+href={`/products/${slug}`}
+>
+
 <button
-
 className="mt-6 px-5 py-3 rounded-full bg-[#1E352B] text-white"
-
 >
 
 查看商品
 
 </button>
+
+</Link>
 
 </Card>
 
