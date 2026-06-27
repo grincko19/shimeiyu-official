@@ -1,13 +1,13 @@
 import "./globals.css";
 import type { Metadata } from "next";
+
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import BackToTop from "@/components/ui/BackToTop";
 
-export const metadata: Metadata = {
-  title: "施美玉名香祖舖 | SHI MEI YU",
-  description: "Since 1774",
-};
+import { siteMetadata } from "./seo/metadata";
+
+export const metadata: Metadata = siteMetadata;
 
 export default function RootLayout({
   children,
