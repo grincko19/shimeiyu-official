@@ -9,21 +9,22 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+      setScrolled(window.scrollY > 30);
     };
 
     window.addEventListener("scroll", handleScroll);
-
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <header
-      className={`fixed top-0 w-full z-50 transition ${
-        scrolled ? "bg-white shadow-md" : "bg-white/70 backdrop-blur"
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+        scrolled
+          ? "bg-white shadow-md h-16"
+          : "bg-white/70 backdrop-blur h-20"
       }`}
     >
-      <nav className="max-w-7xl mx-auto h-20 flex justify-between items-center px-6">
+      <nav className="max-w-7xl mx-auto h-full flex justify-between items-center px-6 transition-all duration-300">
         <Logo />
 
         <div className="hidden md:flex gap-10">
