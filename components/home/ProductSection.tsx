@@ -9,9 +9,11 @@ export default function ProductSection() {
         <Heading title="精選商品" subtitle="Best Seller" />
 
         <div className="grid md:grid-cols-3 gap-8">
-          <div className="aspect-square bg-gray-200 rounded-2xl" />
-          <div className="aspect-square bg-gray-200 rounded-2xl" />
-          <div className="aspect-square bg-gray-200 rounded-2xl" />
+          <div className="group aspect-square rounded-2xl bg-gray-200 relative overflow-hidden transition duration-500 hover:scale-[1.03] hover:shadow-xl" />
+
+          <div className="group aspect-square rounded-2xl bg-gray-200 relative overflow-hidden transition duration-500 hover:scale-[1.03] hover:shadow-xl" />
+
+          <div className="group aspect-square rounded-2xl bg-gray-200 relative overflow-hidden transition duration-500 hover:scale-[1.03] hover:shadow-xl" />
         </div>
       </Section>
     </ScrollFade>
