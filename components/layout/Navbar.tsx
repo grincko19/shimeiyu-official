@@ -1,3 +1,4 @@
+import Logo from "../logo/Logo";
 export default function Navbar(){
 
 return(
@@ -8,7 +9,7 @@ return(
 
 <h2>
 
-SHI MEI YU
+<Logo/>
 
 </h2>
 
